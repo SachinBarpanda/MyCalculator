@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator">
+
+    <TextView
+        android:id="@+id/txtCalculations"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:paddingLeft="8dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCalculations"
+        tools:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="0"
+            android:textSize="50sp"
+            tools:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_7"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_8"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_9"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnPlus"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@android:drawable/ic_input_add"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_4"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_5"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_6"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnSubtract"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="18dp"
+                android:src="@android:drawable/button_onoff_indicator_on"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_1"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_2"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_3"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@android:drawable/ic_delete"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:text="C"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing_0_1"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:backgroundTint="#fff"
+                android:padding="0dp"
+                android:src="@drawable/drawing__divide_"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnEqual"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:src="@drawable/drawing_is_equal_to" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
