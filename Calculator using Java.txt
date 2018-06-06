@@ -1,0 +1,165 @@
+		   
+
+
+			 Making a Calculator
+1.Basic Knowledge of Java or Any other Android Programming language.
+2.Some resources for Buttons and other stuffs.
+3.And we're good to go.
+4.First we have to create a basic model of a calculator
+5.Then we have to make a basic blue print of the things we're gonna use.
+6.Making images or downloading of things in some software.
+7. Let's make, then we will think ahead
+8.Let's make it a bit classy
+9. So we just finished making up the numbers.
+10.So ,we have opened Android Studio Successfully!
+11.Let's learn somethings before we can continue......
+12.This is the basic app for the android device, so we are going to use the same image for every device.
+13.I will upload it to imgur so you guys can download and use it'
+14.But let's see how image support multiple screen.
+
+
+					Use ConstraintLayout
+
+The best way to create a responsive layout for different screen sizes is to use ConstraintLayout as the base layout in your UI. ConstraintLayout allows you to specify the position and size for each view according to spacial relationships with other views in the layout. This way, all the views can move and stretch together as the screen size changes.
+
+The easiest way to build a layout with ConstraintLayout is to use the Layout Editor in Android Studio. It allows you to drag new views to the layout, attach their constraints to the parent view and other sibling views, and edit the view's properties, all without editing any XML by hand.
+
+Here's how other smallest width values correspond to typical screen sizes:
+
+320dp: a typical phone screen (240x320 ldpi, 320x480 mdpi, 480x800 hdpi, etc).
+480dp: a large phone screen ~5" (480x800 mdpi).
+600dp: a 7” tablet (600x1024 mdpi).
+720dp: a 10” tablet (720x1280 mdpi, 800x1280 mdpi, etc).
+
+
+					Avoid hard-coded layout sizes
+
+To ensure that your layout is flexible and adapts to different screen sizes, you should use "wrap_content" and "match_parent" for the width and height of most view components, instead of hard-coded sizes.
+
+"wrap_content" tells the view to set its size to whatever is necessary to fit the content within that view.
+
+"match_parent" makes the view expand to as much as possible within the parent view.
+
+Source:- https://developer.android.com
+
+				What to do if working on a low spec pc !
+
+Go to help->Edit custom vm option->Write -Xmx512m
+
+Save and Restart the ide and you're good to go!
+
+So something about the android studio:-
+
+Go to->app->manifests->open the file.
+You will find:-
+1.android:theme="@style/AppTheme"> It will help us to change theme of the app.
+2.android:label="@string/app_name" It contains name of the app.
+3.Java folder contains basically the java codes(Obviously)!
+4.In Drawable folder you can copy your images to use!
+5.In Layout files xml files (which are layout ) are present
+6.In mipmap files icons of the files are shown like in here:-
+android:icon="@mipmap/ic_launcher"
+like in here look!
+
+7.In values we have
+ 7.1 Colors :- For our application
+ 7.2 Strings :-String resources
+ 7.3 Style :-
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
+
+here "AppCompat" helps low to cope with low compatible devices
+which is 4.0.0
+
+but we don't want it because it can handle this already it's a feature in android version 21.(which I have previously saved to 15)
+
+So we will change it a bit!
+
+				Using the Material Theme
+
+
+The new material theme provides:
+
+System widgets that let you set their color palette
+Touch feedback animations for the system widgets
+Activity transition animations
+You can customize the look of the material theme according to your brand identity with a color palette you control. You can tint the action bar and the status bar using theme attributes, as shown in Figure 3.
+
+The system widgets have a new design and touch feedback animations. You can customize the color palette, the touch feedback animations, and the activity transitions for your app.
+
+The material theme is defined as:
+
+@android:style/Theme.Material (dark version)
+@android:style/Theme.Material.Light (light version)
+@android:style/Theme.Material.Light.DarkActionBar
+
+Source:- https://developer.android.com
+
+We have to use a theme that is compatible with the class and xml File
+
+So if:-<style name="AppTheme" parent="@android:style/Theme.Material">(No action bar removed!)
+In class calculator:-
+public class Calculator extends AppCompatActivity will be changed to Activity
+In order to stop the application from crashing!
+
+And it is sucessfully ran .
+
+So the theme uses rgb colors .
+Let's check it out too!
+Check it out here :-
+https://www.materialpalette.com/colors
+source code suggested by 'OpenAkira', On twitch!
+
+To use hexadecimal values of the colors just use the #<code> and the color code.
+
+So give colors to the color.xml on yoour choice!
+But still it won't work ,because it is still not used in our app!
+
+SO how will we make it to use it:-
+<item name="colorPrimary">@color/colorPrimary</item>
+here change colorPrimary to android:colorPrimary
+and same for the rest two...
+
+You will see it changes!
+
+You can also change
+<style name="AppTheme" parent="@android:style/Theme.Material"> to this :---->>
+<style name="AppTheme" parent="@android:style/Theme.Material.Light">
+
+For seeing the lighter themes
+
+			   Customize the Status Bar
+
+The material theme lets you easily customize the status bar, so you can specify a color that fits your brand and provides enough contrast to show the white status icons. To set a custom color for the status bar, use the android:statusBarColor attribute when you extend the material theme. By default, android:statusBarColor inherits the value of android:colorPrimaryDark.
+
+You can also draw behind the status bar yourself. For example, if you want to show the status bar transparently over a photo, with a subtle dark gradient to ensure the white status icons are visible. To do so, set the android:statusBarColor attribute to @android:color/transparent and adjust the window flags as required. You can also use the Window.setStatusBarColor() method for animations or fading.
+
+Note: The status bar should almost always have a clear delineation from the primary toolbar, except for cases where you show edge-to-edge rich imagery or media content behind these bars and when you use a gradient to ensure that the icons are still visible.
+
+When you customize the navigation and status bars, either make them both transparent or modify only the status bar. The navigation bar should remain black in all other cases.
+
+
+Source:- https://developer.android.com
+
+Let's change the Label of the app
+Go to Strings.xml files
+
+<resources>
+    <string name="app_name">MyCalculator</string>
+</resources>
+
+Change the name 
+
+<resources>
+    <string name="app_name">Calculator</string>
+</resources>
+
