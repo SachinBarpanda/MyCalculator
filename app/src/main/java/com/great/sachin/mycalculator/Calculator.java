@@ -145,7 +145,9 @@ public class Calculator extends Activity implements View.OnClickListener {
     }
 
     private void operatorIsPressed(OPERATOR operatorPressed){
-        if(stringNumberAtLeft== ""){clearData();}
+        if(stringNumberAtLeft== ""){
+            currentOperator=null;
+        }
 
         if(currentOperator!=null) {
 
