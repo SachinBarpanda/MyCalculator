@@ -201,7 +201,7 @@ public class Calculator extends Activity implements View.OnClickListener {
         txtResults.setText("0");
         currentOperator=null;
         calculationString="0";
-
+        currentNumber="";
     }
 }
 
